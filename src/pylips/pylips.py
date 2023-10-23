@@ -84,7 +84,7 @@ class Pylips:
                 if self.check_if_paired() is False:
                     print("No valid credentials found, starting pairing process...")
                     self.pair()
-                with open("settings.ini", "w") as configfile:
+                with open("../../resources/settings.ini", "w") as configfile:
                     self.config.write(configfile)
             else:
                 if self.is_online(self.config["TV"]["host"]):
